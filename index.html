@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>唯庸 | AI Agent 布道者</title>
+    <title>刘晨璐 - AI驱动的物流产品经理</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'Noto Sans SC', 'system-ui', 'sans-serif'],
+                        sans: ['Noto Sans SC', 'system-ui', 'sans-serif'],
                     },
                     colors: {
                         apple: {
@@ -36,25 +36,6 @@
                                 800: '#1D1D1F',
                             }
                         }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.8s ease-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
                     }
                 }
             }
@@ -63,11 +44,6 @@
     <style>
         .glass {
             background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: saturate(180%) blur(20px);
-            -webkit-backdrop-filter: saturate(180%) blur(20px);
-        }
-        .glass-dark {
-            background: rgba(0, 0, 0, 0.72);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
         }
@@ -81,565 +57,347 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
         }
-        .link-underline {
-            position: relative;
-        }
-        .link-underline::after {
-            content: '';
+        .timeline-line {
             position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background: linear-gradient(90deg, #007AFF, #5856D6);
-            transition: width 0.3s ease;
+            left: 24px;
+            top: 48px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #007AFF, #AF52DE);
         }
-        .link-underline:hover::after {
-            width: 100%;
+        .skill-tag {
+            transition: all 0.2s;
         }
-        .hero-gradient {
-            background: linear-gradient(180deg, #F5F5F7 0%, #FFFFFF 100%);
-        }
-        .mesh-gradient {
-            background: 
-                radial-gradient(at 40% 20%, rgba(0, 122, 255, 0.08) 0px, transparent 50%),
-                radial-gradient(at 80% 0%, rgba(175, 82, 222, 0.08) 0px, transparent 50%),
-                radial-gradient(at 0% 50%, rgba(88, 86, 214, 0.08) 0px, transparent 50%),
-                radial-gradient(at 80% 50%, rgba(0, 122, 255, 0.08) 0px, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(255, 45, 85, 0.05) 0px, transparent 50%);
+        .skill-tag:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="font-sans text-apple-gray-800 antialiased mesh-gradient min-h-screen">
+<body class="font-sans text-apple-gray-800 antialiased bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-semibold tracking-tight gradient-text">唯庸</span>
+                <span class="text-xl font-semibold tracking-tight gradient-text">Liu Chenlu</span>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors">关于</a>
+                    <a href="#journey" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors">成长</a>
+                    <a href="#skills" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors">技能</a>
+                    <a href="#portfolio" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors">作品</a>
+                    <a href="#contact" class="px-4 py-2 bg-apple-blue text-white rounded-full text-sm font-medium hover:bg-apple-blue/90 transition-colors">联系我</a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors link-underline">关于</a>
-                    <a href="#testimonials" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors link-underline">学员</a>
-                    <a href="#projects" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors link-underline">作品</a>
-                    <a href="#contact" class="text-sm font-medium text-apple-gray-600 hover:text-apple-blue transition-colors link-underline">联系</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-apple-gray-600 hover:text-apple-gray-800">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass border-t border-white/20">
-            <div class="px-6 py-4 space-y-3">
-                <a href="#about" class="block text-sm font-medium text-apple-gray-600 hover:text-apple-blue">关于</a>
-                <a href="#testimonials" class="block text-sm font-medium text-apple-gray-600 hover:text-apple-blue">学员</a>
-                <a href="#projects" class="block text-sm font-medium text-apple-gray-600 hover:text-apple-blue">作品</a>
-                <a href="#contact" class="block text-sm font-medium text-apple-gray-600 hover:text-apple-blue">联系</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient pt-32 pb-20 lg:pt-40 lg:pb-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="animate-slide-up">
-                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-apple-blue/10 text-apple-blue text-sm font-medium mb-6">
-                        <i class="fas fa-robot mr-2"></i>
-                        AI Agent 布道者
+    <section id="about" class="pt-32 pb-16 lg:pt-40 lg:pb-24">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+                <!-- 照片区域 -->
+                <div class="flex-shrink-0">
+                    <div class="w-40 h-40 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-apple-blue to-apple-purple p-1">
+                        <div class="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                            <i class="fas fa-user-circle text-apple-gray-200 text-8xl"></i>
+                        </div>
                     </div>
-                    <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-apple-gray-800 mb-6 leading-tight">
-                        用AI解放<br>
-                        <span class="gradient-text">10000人的生产力</span>
+                </div>
+                
+                <!-- 个人信息 -->
+                <div class="text-center lg:text-left flex-1">
+                    <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-apple-gray-800 mb-4">
+                        刘晨璐
                     </h1>
-                    <p class="text-lg text-apple-gray-600 mb-8 leading-relaxed max-w-lg">
-                        前字节跳动AI产品经理 · 开源社区主理人 · 效率革命推动者<br>
-                        已助力20+团队完成智能体工作流部署
+                    <p class="text-2xl lg:text-3xl font-bold gradient-text mb-4">
+                        AI驱动的物流产品经理
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#projects" class="inline-flex items-center px-6 py-3 rounded-full bg-apple-blue text-white font-medium hover:bg-apple-blue/90 transition-all hover:scale-105 shadow-lg shadow-apple-blue/25">
-                            查看作品
-                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                        </a>
-                        <a href="#contact" class="inline-flex items-center px-6 py-3 rounded-full bg-white text-apple-gray-800 font-medium border border-apple-gray-200 hover:bg-apple-gray-50 transition-all">
-                            联系我
-                        </a>
-                    </div>
-                    <div class="mt-10 flex items-center gap-6 text-apple-gray-400">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-users text-apple-gray-400"></i>
-                            <span class="text-sm">4000+ 学员</span>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div class="inline-flex items-center px-4 py-2 bg-apple-blue/10 rounded-full">
+                            <i class="fas fa-briefcase text-apple-blue mr-2"></i>
+                            <span class="text-apple-blue font-semibold">5年工作经验</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-building text-apple-gray-400"></i>
-                            <span class="text-sm">20+ 企业</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-award text-apple-gray-400"></i>
-                            <span class="text-sm">得到特聘讲师</span>
+                        <div class="inline-flex items-center px-4 py-2 bg-apple-purple/10 rounded-full">
+                            <i class="fas fa-graduation-cap text-apple-purple mr-2"></i>
+                            <span class="text-apple-purple font-semibold">中南林业科技大学 · 自动化</span>
                         </div>
                     </div>
                 </div>
-                <div class="relative animate-fade-in">
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl animate-float">
-                        <img src="https://picsum.photos/800/600?random=1" alt="唯庸" class="w-full h-auto object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-16">
+                <div onclick="copyToClipboard('13027482861', '电话')" class="bg-white rounded-2xl p-6 text-center card-hover border border-apple-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-apple-blue/10 flex items-center justify-center mb-3">
+                        <i class="fas fa-phone text-apple-blue text-xl"></i>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-apple-blue/20 rounded-full blur-3xl"></div>
-                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-apple-purple/20 rounded-full blur-3xl"></div>
+                    <div class="text-sm text-apple-gray-500 mb-1">电话（点击复制）</div>
+                    <div class="font-semibold text-apple-gray-800">13027482861</div>
+                </div>
+                <div onclick="copyToClipboard('1173081638@qq.com', '邮箱')" class="bg-white rounded-2xl p-6 text-center card-hover border border-apple-gray-100 cursor-pointer">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-apple-purple/10 flex items-center justify-center mb-3">
+                        <i class="fas fa-envelope text-apple-purple text-xl"></i>
+                    </div>
+                    <div class="text-sm text-apple-gray-500 mb-1">邮箱（点击复制）</div>
+                    <div class="font-semibold text-apple-gray-800">1173081638@qq.com</div>
+                </div>
+            </div>
+
+            <!-- What I Do -->
+            <div class="mb-16">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-apple-gray-800 mb-2">我能做什么</h2>
+                    <p class="text-apple-gray-500">物流 + AI，让传统业务更聪明</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl p-8 card-hover border border-apple-gray-100">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-apple-blue to-apple-indigo flex items-center justify-center mb-5">
+                            <i class="fas fa-network-wired text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">物流业务设计</h3>
+                        <p class="text-apple-gray-600 leading-relaxed">从OMS、TMS到WMS，搭建完整的物流业务系统。熟悉<strong>当日达、隔日达、快递</strong>多种业务模式，用系统化思维解决复杂物流场景。</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 card-hover border border-apple-gray-100">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-apple-orange to-apple-yellow flex items-center justify-center mb-5">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">产品方案落地</h3>
+                        <p class="text-apple-gray-600 leading-relaxed">深入业务现场，梳理<strong>信息流、资金流、实物流</strong>，输出可落地的产品方案。从需求分析到上线迭代，全流程把控。</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 card-hover border border-apple-gray-100">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-apple-purple to-apple-pink flex items-center justify-center mb-5">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">AI工作流搭建</h3>
+                        <p class="text-apple-gray-600 leading-relaxed">基于<strong>Coze、Dify</strong>等平台，设计<strong>Agent智能体</strong>和自动化工作流。把重复性工作交给AI，让团队专注更有价值的事。</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 card-hover border border-apple-gray-100">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-apple-green to-apple-teal flex items-center justify-center mb-5">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">数据驱动优化</h3>
+                        <p class="text-apple-gray-600 leading-relaxed">用<strong>SQL、Python</strong>分析业务数据，衡量<strong>ROI</strong>，制定标准<strong>SOP</strong>。让数据说话，持续优化产品体验。</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 bg-white/50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">4000+</div>
-                    <div class="text-sm text-apple-gray-600">培训学员</div>
+    <!-- Journey Section -->
+    <section id="journey" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-apple-gray-800 mb-4">成长路径</h2>
+                <p class="text-apple-gray-600">从同城配送到跨境物流，探索物流数字化的每一步</p>
+            </div>
+            
+            <div class="relative max-w-3xl mx-auto">
+                <div class="timeline-line"></div>
+                
+                <!-- 极兔速递 -->
+                <div class="relative pl-16 pb-12 group">
+                    <div class="absolute left-0 w-12 h-12 rounded-full bg-gradient-to-br from-apple-red to-apple-orange flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-globe-asia text-white"></i>
+                    </div>
+                    <div class="bg-gradient-to-br from-apple-red/5 to-apple-orange/5 rounded-2xl p-6 border border-apple-red/10 hover:shadow-lg transition-shadow">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <h3 class="text-xl font-semibold text-apple-gray-800">极兔速递</h3>
+                            <span class="px-3 py-1 bg-apple-red/10 text-apple-red rounded-full text-xs font-medium">最新阶段</span>
+                        </div>
+                        <p class="text-sm text-apple-gray-400 mb-3">2025.02 - 至今</p>
+                        <p class="text-apple-gray-600 leading-relaxed">在快递业务的国际化赛道上，深入探索东南亚市场的本地化运营。从驿站网络到财务结算，用系统化思维解决跨境物流的复杂挑战。</p>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">20+</div>
-                    <div class="text-sm text-apple-gray-600">企业客户</div>
+                
+                <!-- 兴盛优选 -->
+                <div class="relative pl-16 pb-12 group">
+                    <div class="absolute left-0 w-12 h-12 rounded-full bg-gradient-to-br from-apple-purple to-apple-pink flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-store text-white"></i>
+                    </div>
+                    <div class="bg-gradient-to-br from-apple-purple/5 to-apple-pink/5 rounded-2xl p-6 border border-apple-purple/10 hover:shadow-lg transition-shadow">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <h3 class="text-xl font-semibold text-apple-gray-800">兴盛优选</h3>
+                            <span class="px-3 py-1 bg-apple-purple/10 text-apple-purple rounded-full text-xs font-medium">进阶突破</span>
+                        </div>
+                        <p class="text-sm text-apple-gray-400 mb-3">2023.06 - 2025.01</p>
+                        <p class="text-apple-gray-600 leading-relaxed">在隔日配送的社区团购场景中，搭建逆向物流体系。从退货揽收到逆向仓储，优化全链路的用户体验与运营效率。</p>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">10000</div>
-                    <div class="text-sm text-apple-gray-600">万人计划目标</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl lg:text-4xl font-bold gradient-text mb-2">3+</div>
-                    <div class="text-sm text-apple-gray-600">独立产品</div>
+                
+                <!-- 裹小递 -->
+                <div class="relative pl-16 group">
+                    <div class="absolute left-0 w-12 h-12 rounded-full bg-gradient-to-br from-apple-blue to-apple-teal flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rocket text-white"></i>
+                    </div>
+                    <div class="bg-gradient-to-br from-apple-blue/5 to-apple-teal/5 rounded-2xl p-6 border border-apple-blue/10 hover:shadow-lg transition-shadow">
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <h3 class="text-xl font-semibold text-apple-gray-800">裹小递</h3>
+                            <span class="px-3 py-1 bg-apple-blue/10 text-apple-blue rounded-full text-xs font-medium">起点</span>
+                        </div>
+                        <p class="text-sm text-apple-gray-400 mb-3">2021.05 - 2023.05</p>
+                        <p class="text-apple-gray-600 leading-relaxed">从0到1参与同城配送的创业历程，搭建运力调度系统。在这里完成了从自动化专业学生到产品经理的蜕变，理解了物流的底层逻辑。</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-apple-gray-800 mb-4">关于我</h2>
-                <p class="text-lg text-apple-gray-600">从产品经理到AI布道者，持续推动效率革命</p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 lg:py-24">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-apple-gray-800 mb-2">工具箱</h2>
+                <p class="text-apple-gray-500">日常使用的工具和技术栈</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-blue to-apple-indigo flex items-center justify-center mb-6">
-                        <i class="fas fa-briefcase text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">职业背景</h3>
-                    <p class="text-apple-gray-600 leading-relaxed">前字节跳动AI产品经理，拥有丰富的AI产品设计与落地经验，深谙企业AI转型痛点。</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-purple to-apple-pink flex items-center justify-center mb-6">
-                        <i class="fas fa-chalkboard-teacher text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">培训讲师</h3>
-                    <p class="text-apple-gray-600 leading-relaxed">得到APP AI学习圈特聘讲师，已为4000+学员提供AI转型培训认证。</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-orange to-apple-yellow flex items-center justify-center mb-6">
-                        <i class="fas fa-rocket text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">独立开发者</h3>
-                    <p class="text-apple-gray-600 leading-relaxed">使用AI不写一行代码，实现产品商业化，践行AI赋能个体的理念。</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-green to-apple-teal flex items-center justify-center mb-6">
-                        <i class="fas fa-users-cog text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">企业咨询</h3>
-                    <p class="text-apple-gray-600 leading-relaxed">已助力20+团队完成智能体工作流部署，提供端到端的AI转型解决方案。</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-red to-apple-orange flex items-center justify-center mb-6">
-                        <i class="fas fa-lightbulb text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">万人计划</h3>
-                    <p class="text-apple-gray-600 leading-relaxed">发起万人智能体计划，致力于用AI解放10000人的生产力。</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100">
-                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-indigo to-apple-purple flex items-center justify-center mb-6">
-                        <i class="fas fa-code-branch text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-apple-gray-800 mb-3">开源社区</h3>
-                    <p class="text-apple-gray-600 leading-relaxed">开源社区主理人，推动AI Agent生态建设，分享前沿技术与实践经验。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 lg:py-32 bg-white/50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-apple-gray-800 mb-4">学员心声</h2>
-                <p class="text-lg text-apple-gray-600">来自4000+学员的真实反馈与成长故事</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100 relative">
-                    <div class="absolute top-6 right-6 text-apple-gray-200">
-                        <i class="fas fa-quote-right text-4xl"></i>
-                    </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 产品设计 -->
+                <div class="bg-white rounded-2xl p-8 border border-apple-gray-100">
                     <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/100/100?random=10" alt="学员头像" class="w-14 h-14 rounded-full object-cover border-2 border-apple-blue/20">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-apple-gray-800">李明远</h4>
-                            <p class="text-sm text-apple-gray-500">某互联网公司产品总监</p>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-blue to-apple-indigo flex items-center justify-center mr-4">
+                            <i class="fas fa-pencil-ruler text-white text-xl"></i>
                         </div>
+                        <h3 class="text-xl font-semibold text-apple-gray-800">产品设计</h3>
                     </div>
-                    <div class="flex text-apple-yellow mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-apple-gray-600 leading-relaxed mb-4">"唯庸老师的课程让我对AI Agent有了全新的认知。学完第一周，我就用Coze搭建了一个自动化报告生成工具，团队效率提升了3倍。"</p>
-                    <div class="flex items-center text-sm text-apple-blue">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>已搭建3个业务智能体</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-2 bg-apple-blue/10 text-apple-blue rounded-full text-sm font-medium">Axure</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-blue/10 text-apple-blue rounded-full text-sm font-medium">墨刀</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-blue/10 text-apple-blue rounded-full text-sm font-medium">ProcessOn</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-blue/10 text-apple-blue rounded-full text-sm font-medium">Xmind</span>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100 relative">
-                    <div class="absolute top-6 right-6 text-apple-gray-200">
-                        <i class="fas fa-quote-right text-4xl"></i>
-                    </div>
+                
+                <!-- 数据分析 -->
+                <div class="bg-white rounded-2xl p-8 border border-apple-gray-100">
                     <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/100/100?random=11" alt="学员头像" class="w-14 h-14 rounded-full object-cover border-2 border-apple-purple/20">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-apple-gray-800">王思琪</h4>
-                            <p class="text-sm text-apple-gray-500">自由职业设计师</p>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-green to-apple-teal flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-bar text-white text-xl"></i>
                         </div>
+                        <h3 class="text-xl font-semibold text-apple-gray-800">数据分析</h3>
                     </div>
-                    <div class="flex text-apple-yellow mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-apple-gray-600 leading-relaxed mb-4">"作为一个完全不懂代码的设计师，我原本以为自己永远无法做出产品。但在唯庸老师的指导下，我用AI工具独立开发了一个设计素材管理工具，现在已经有了付费用户！"</p>
-                    <div class="flex items-center text-sm text-apple-purple">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>产品月收入突破5000元</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-2 bg-apple-green/10 text-apple-green rounded-full text-sm font-medium">SQL</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-green/10 text-apple-green rounded-full text-sm font-medium">Excel</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-green/10 text-apple-green rounded-full text-sm font-medium">Python</span>
                     </div>
                 </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100 relative">
-                    <div class="absolute top-6 right-6 text-apple-gray-200">
-                        <i class="fas fa-quote-right text-4xl"></i>
-                    </div>
+                
+                <!-- AI工具 -->
+                <div class="bg-white rounded-2xl p-8 border border-apple-gray-100">
                     <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/100/100?random=12" alt="学员头像" class="w-14 h-14 rounded-full object-cover border-2 border-apple-green/20">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-apple-gray-800">张浩然</h4>
-                            <p class="text-sm text-apple-gray-500">传统企业数字化转型负责人</p>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-apple-purple to-apple-pink flex items-center justify-center mr-4">
+                            <i class="fas fa-robot text-white text-xl"></i>
                         </div>
+                        <h3 class="text-xl font-semibold text-apple-gray-800">AI工具</h3>
                     </div>
-                    <div class="flex text-apple-yellow mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag px-4 py-2 bg-apple-purple/10 text-apple-purple rounded-full text-sm font-medium">Coze</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-purple/10 text-apple-purple rounded-full text-sm font-medium">Trae</span>
+                        <span class="skill-tag px-4 py-2 bg-apple-purple/10 text-apple-purple rounded-full text-sm font-medium">Claude Code</span>
                     </div>
-                    <p class="text-apple-gray-600 leading-relaxed mb-4">"我们是一个50人的传统制造企业，在唯庸老师的咨询指导下，成功搭建了客户服务智能体和订单处理自动化流程，人力成本降低了40%。"</p>
-                    <div class="flex items-center text-sm text-apple-green">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>年节省人力成本60万+</span>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100 relative">
-                    <div class="absolute top-6 right-6 text-apple-gray-200">
-                        <i class="fas fa-quote-right text-4xl"></i>
-                    </div>
-                    <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/100/100?random=13" alt="学员头像" class="w-14 h-14 rounded-full object-cover border-2 border-apple-orange/20">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-apple-gray-800">陈雨萱</h4>
-                            <p class="text-sm text-apple-gray-500">自媒体创作者</p>
-                        </div>
-                    </div>
-                    <div class="flex text-apple-yellow mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="text-apple-gray-600 leading-relaxed mb-4">"唯庸老师的Agent 101知识库是我见过最系统的AI学习资料。通过学习，我现在能熟练使用多个AI工具协同工作，内容产出效率提升了5倍。"</p>
-                    <div class="flex items-center text-sm text-apple-orange">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>粉丝增长300%，日更成为可能</span>
-                    </div>
-                </div>
-
-                <!-- Testimonial 5 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100 relative">
-                    <div class="absolute top-6 right-6 text-apple-gray-200">
-                        <i class="fas fa-quote-right text-4xl"></i>
-                    </div>
-                    <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/100/100?random=14" alt="学员头像" class="w-14 h-14 rounded-full object-cover border-2 border-apple-pink/20">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-apple-gray-800">刘子轩</h4>
-                            <p class="text-sm text-apple-gray-500">创业公司CEO</p>
-                        </div>
-                    </div>
-                    <div class="flex text-apple-yellow mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-apple-gray-600 leading-relaxed mb-4">"我们团队参加了唯庸老师的企业内训，效果超出预期。现在全公司都在使用AI工具，从代码审查到市场分析，每个环节都实现了智能化。"</p>
-                    <div class="flex items-center text-sm text-apple-pink">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>团队人效提升200%</span>
-                    </div>
-                </div>
-
-                <!-- Testimonial 6 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover border border-apple-gray-100 relative">
-                    <div class="absolute top-6 right-6 text-apple-gray-200">
-                        <i class="fas fa-quote-right text-4xl"></i>
-                    </div>
-                    <div class="flex items-center mb-6">
-                        <img src="https://picsum.photos/100/100?random=15" alt="学员头像" class="w-14 h-14 rounded-full object-cover border-2 border-apple-indigo/20">
-                        <div class="ml-4">
-                            <h4 class="font-semibold text-apple-gray-800">赵静怡</h4>
-                            <p class="text-sm text-apple-gray-500">高校教师</p>
-                        </div>
-                    </div>
-                    <div class="flex text-apple-yellow mb-4">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-apple-gray-600 leading-relaxed mb-4">"作为一名教育工作者，我一直想将AI引入课堂。唯庸老师的课程给了我清晰的路线图，现在我已成功开设了AI应用选修课，深受学生欢迎。"</p>
-                    <div class="flex items-center text-sm text-apple-indigo">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>开设校内AI课程，选课率100%</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trust Indicators -->
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-apple-blue mb-2">98%</div>
-                    <div class="text-sm text-apple-gray-600">学员满意度</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-apple-purple mb-2">85%</div>
-                    <div class="text-sm text-apple-gray-600">成功落地项目</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-apple-green mb-2">3倍</div>
-                    <div class="text-sm text-apple-gray-600">平均效率提升</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-apple-orange mb-2">50+</div>
-                    <div class="text-sm text-apple-gray-600">企业培训案例</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 lg:py-32 bg-white/50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-apple-gray-800 mb-4">代表作品</h2>
-                <p class="text-lg text-apple-gray-600">从知识库到独立产品，用AI创造价值</p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-apple-gray-800 mb-2">一些作品</h2>
+                <p class="text-apple-gray-500">做过的项目和原型设计</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <a href="https://agent101.feishu.cn/wiki/KLarwIA1piLrBYk7bf2cBf3HnNe" target="_blank" class="group block">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover border border-apple-gray-100">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://picsum.photos/600/400?random=2" alt="Agent 101 智能体指北" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-apple-blue/90 text-white text-xs font-medium">
-                                    <i class="fas fa-book mr-1.5"></i>知识库
-                                </span>
-                            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 用户端原型 -->
+                <a href="https://modao.cc/app/NmozMyJ8rkt0irbTAX5G9X" target="_blank" class="group block">
+                    <div class="bg-apple-gray-50 rounded-2xl overflow-hidden card-hover border border-apple-gray-100 h-full">
+                        <div class="h-48 bg-gradient-to-br from-apple-blue to-apple-indigo flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-white text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-apple-gray-800 mb-2 group-hover:text-apple-blue transition-colors">Agent 101 智能体指北</h3>
-                            <p class="text-apple-gray-600 text-sm leading-relaxed mb-4">系统化的AI Agent学习指南，从入门到精通的完整知识体系</p>
-                            <div class="flex items-center text-apple-blue font-medium text-sm">
-                                访问项目
-                                <i class="fas fa-external-link-alt ml-2 transition-transform group-hover:translate-x-1"></i>
+                            <h3 class="text-lg font-semibold text-apple-gray-800 mb-2 group-hover:text-apple-blue transition-colors">同城配送用户端</h3>
+                            <p class="text-apple-gray-500 text-sm mb-4">用户下单、订单追踪、支付全流程原型设计</p>
+                            <div class="flex items-center text-apple-blue text-sm font-medium">
+                                <span>查看原型</span>
+                                <i class="fas fa-external-link-alt ml-2 group-hover:translate-x-1 transition-transform"></i>
                             </div>
                         </div>
                     </div>
                 </a>
-
-                <!-- Project 2 -->
-                <a href="https://agent101.cn/" target="_blank" class="group block">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover border border-apple-gray-100">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://picsum.photos/600/400?random=3" alt="唯庸的AI公开课" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-apple-purple/90 text-white text-xs font-medium">
-                                    <i class="fas fa-graduation-cap mr-1.5"></i>在线课程
-                                </span>
-                            </div>
+                
+                <!-- 配送端原型 -->
+                <a href="https://modao.cc/app/0vSAfalrl0up4gWZ4VYn" target="_blank" class="group block">
+                    <div class="bg-apple-gray-50 rounded-2xl overflow-hidden card-hover border border-apple-gray-100 h-full">
+                        <div class="h-48 bg-gradient-to-br from-apple-purple to-apple-pink flex items-center justify-center">
+                            <i class="fas fa-motorcycle text-white text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300"></i>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-apple-gray-800 mb-2 group-hover:text-apple-purple transition-colors">唯庸的AI公开课</h3>
-                            <p class="text-apple-gray-600 text-sm leading-relaxed mb-4">面向大众的AI应用实战课程，4000+学员认证的优质内容</p>
-                            <div class="flex items-center text-apple-purple font-medium text-sm">
-                                访问项目
-                                <i class="fas fa-external-link-alt ml-2 transition-transform group-hover:translate-x-1"></i>
+                            <h3 class="text-lg font-semibold text-apple-gray-800 mb-2 group-hover:text-apple-purple transition-colors">同城配送配送端</h3>
+                            <p class="text-apple-gray-500 text-sm mb-4">骑手接单、配送导航、订单管理原型设计</p>
+                            <div class="flex items-center text-apple-purple text-sm font-medium">
+                                <span>查看原型</span>
+                                <i class="fas fa-external-link-alt ml-2 group-hover:translate-x-1 transition-transform"></i>
                             </div>
                         </div>
                     </div>
                 </a>
-
-                <!-- Project 3 -->
-                <a href="https://yonote.net/" target="_blank" class="group block">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover border border-apple-gray-100">
-                        <div class="relative h-48 overflow-hidden">
-                            <img src="https://picsum.photos/600/400?random=4" alt="YoNote 万物可视化Agent" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-apple-green/90 text-white text-xs font-medium">
-                                    <i class="fas fa-cube mr-1.5"></i>独立产品
-                                </span>
-                            </div>
+                
+                <!-- AI驱动原型 -->
+                <div class="group block">
+                    <div class="bg-apple-gray-50 rounded-2xl overflow-hidden card-hover border border-apple-gray-100 h-full">
+                        <div class="h-48 bg-gradient-to-br from-apple-green to-apple-teal flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-6xl opacity-80"></i>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-apple-gray-800 mb-2 group-hover:text-apple-green transition-colors">YoNote 万物可视化Agent</h3>
-                            <p class="text-apple-gray-600 text-sm leading-relaxed mb-4">AI驱动的可视化工具，让数据与创意以全新方式呈现</p>
-                            <div class="flex items-center text-apple-green font-medium text-sm">
-                                访问项目
-                                <i class="fas fa-external-link-alt ml-2 transition-transform group-hover:translate-x-1"></i>
+                            <h3 class="text-lg font-semibold text-apple-gray-800 mb-2">AI驱动原型设计</h3>
+                            <p class="text-apple-gray-500 text-sm mb-4">基于AI技术的产品创新设计（即将上线）</p>
+                            <div class="flex items-center text-apple-gray-400 text-sm font-medium">
+                                <span>敬请期待</span>
+                                <i class="fas fa-clock ml-2"></i>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Links Section -->
-    <section id="contact" class="py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl lg:text-4xl font-bold text-apple-gray-800 mb-4">关注我</h2>
-                <p class="text-lg text-apple-gray-600">在多个平台获取AI前沿资讯与实战干货</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 lg:py-24 bg-gradient-to-br from-apple-gray-800 to-apple-gray-900 text-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <i class="fas fa-paper-plane text-5xl text-apple-blue mb-6"></i>
+                <h2 class="text-3xl font-bold mb-4">一起聊聊？</h2>
+                <p class="text-white/70 max-w-md mx-auto">如果你对物流数字化、AI应用或者产品咨询感兴趣，欢迎随时联系我。期待与你交流！</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                <!-- WeChat Official Account -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm card-hover border border-apple-gray-100 text-center group cursor-pointer" onclick="showWechatQR()">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-apple-green to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fab fa-weixin text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-apple-gray-800 mb-1">公众号</h3>
-                    <p class="text-sm text-apple-gray-600">唯庸AI进化论</p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <div onclick="copyToClipboard('13027482861', '电话')" class="px-8 py-4 bg-white text-apple-gray-800 rounded-full font-semibold hover:bg-apple-gray-100 transition-all cursor-pointer flex items-center hover:scale-105">
+                    <i class="fas fa-phone mr-3"></i>
+                    13027482861
                 </div>
-
-                <!-- Jike -->
-                <a href="https://okjk.co/GzVOHr" target="_blank" class="bg-white rounded-2xl p-6 shadow-sm card-hover border border-apple-gray-100 text-center group">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-apple-yellow to-orange-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-bolt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-apple-gray-800 mb-1">即刻</h3>
-                    <p class="text-sm text-apple-gray-600">@唯庸</p>
-                </a>
-
-                <!-- Bilibili -->
-                <a href="https://space.bilibili.com/3546742760934321" target="_blank" class="bg-white rounded-2xl p-6 shadow-sm card-hover border border-apple-gray-100 text-center group">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-apple-pink to-rose-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-tv text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-apple-gray-800 mb-1">Bilibili</h3>
-                    <p class="text-sm text-apple-gray-600">视频教程</p>
-                </a>
-
-                <!-- WeChat Personal -->
-                <div class="bg-white rounded-2xl p-6 shadow-sm card-hover border border-apple-gray-100 text-center group cursor-pointer" onclick="copyWechatID()">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-apple-blue to-cyan-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-comment-dots text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-apple-gray-800 mb-1">微信</h3>
-                    <p class="text-sm text-apple-gray-600">点击复制</p>
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="mt-16 text-center">
-                <div class="inline-flex items-center px-8 py-4 rounded-2xl bg-gradient-to-r from-apple-blue to-apple-purple text-white shadow-xl shadow-apple-blue/25">
+                <div onclick="copyToClipboard('1173081638@qq.com', '邮箱')" class="px-8 py-4 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-all cursor-pointer flex items-center hover:scale-105">
                     <i class="fas fa-envelope mr-3"></i>
-                    <span class="font-medium">商务合作与企业培训咨询</span>
+                    1173081638@qq.com
                 </div>
-                <p class="mt-4 text-apple-gray-600">为企业AI转型提供端到端解决方案</p>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8">
+                <p class="text-white/40 text-sm">用AI让物流更聪明 · 刘晨璐</p>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-apple-gray-800 text-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <span class="text-2xl font-bold gradient-text">唯庸</span>
-                    <p class="text-apple-gray-400 mt-2 text-sm">AI Agent 布道者 · 效率革命推动者</p>
-                </div>
-                <div class="flex items-center space-x-6">
-                    <a href="https://okjk.co/GzVOHr" target="_blank" class="text-apple-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-bolt text-xl"></i>
-                    </a>
-                    <a href="https://space.bilibili.com/3546742760934321" target="_blank" class="text-apple-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-tv text-xl"></i>
-                    </a>
-                    <a href="#" onclick="showWechatQR(); return false;" class="text-apple-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-weixin text-xl"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="border-t border-apple-gray-700 mt-8 pt-8 text-center">
-                <p class="text-apple-gray-500 text-sm">&copy; 2024 唯庸. All rights reserved. | 用AI解放10000人的生产力</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-full bg-apple-gray-800 text-white text-sm font-medium opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+    <div id="toast" class="fixed bottom-8 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-apple-gray-800 text-white rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 z-50">
         <span id="toast-message"></span>
     </div>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scroll for navigation links
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -649,13 +407,40 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
                 }
             });
         });
 
-        // Toast notification function
+        // Copy to clipboard function
+        function copyToClipboard(text, label) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(`${label}已复制: ${text}`);
+                }).catch(() => {
+                    // Fallback
+                    fallbackCopy(text, label);
+                });
+            } else {
+                fallbackCopy(text, label);
+            }
+        }
+
+        function fallbackCopy(text, label) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast(`${label}已复制: ${text}`);
+            } catch (err) {
+                showToast('复制失败，请手动复制');
+            }
+            document.body.removeChild(textArea);
+        }
+
         function showToast(message) {
             const toast = document.getElementById('toast');
             const toastMessage = document.getElementById('toast-message');
@@ -668,61 +453,6 @@
                 toast.classList.add('opacity-0', 'pointer-events-none');
             }, 3000);
         }
-
-        // Copy WeChat ID
-        function copyWechatID() {
-            const wechatID = 'wangweiyong0219';
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(wechatID).then(() => {
-                    showToast('微信号已复制: ' + wechatID);
-                });
-            } else {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = wechatID;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                showToast('微信号已复制: ' + wechatID);
-            }
-        }
-
-        // Show WeChat QR (placeholder function)
-        function showWechatQR() {
-            showToast('公众号: 唯庸AI进化论');
-        }
-
-        // Navbar background on scroll
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-sm');
-            } else {
-                nav.classList.remove('shadow-sm');
-            }
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all cards
-        document.querySelectorAll('.card-hover').forEach(card => {
-            observer.observe(card);
-        });
     </script>
 </body>
 </html>
